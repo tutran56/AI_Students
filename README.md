@@ -22,6 +22,7 @@
 
 ## 🌟 Giới thiệu
 -Khi học sinh thực hiện các hành động Yolov7 sẽ nhanh chóng biết được hành động của học sinh đó là gì
+<br>
 -Chắc chắn rằng không thể nào đúng được 100% và cũng vẫn sẽ có lỗi xảy ra
 ---
 ## 🏗️ HỆ THỐNG

@@ -26,7 +26,7 @@
 ---
 ## 🏗️ HỆ THỐNG
 <p align="center">
-  <img src="images/Quytrinhdiemdanh.png" alt="System Architecture" width="800"/>
+  <img src="./cbyolov7" alt="System Architecture" width="800"/>
 </p>
 
 ---

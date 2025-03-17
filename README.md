@@ -106,7 +106,7 @@ drive.mount('/content/drive')</code></pre>
 
   ##  Bước 10: Nhận diện hành vi qua video</h2>
   
-    <p>Chạy mô hình YOLOv7 để nhận diện hành vi trong video</p>
+Chạy mô hình YOLOv7 để nhận diện hành vi trong video
     
 ```bash
   import subprocess
@@ -131,7 +131,7 @@ Dự án được phát triển bởi 4 thành viên:
 
 | Họ và Tên                | Vai trò                  |
 |--------------------------|--------------------------|
-| Trần Anh Tú              | Phát triển toàn bộ mã nguồn, thiết kế cơ sở dữ liệu, kiểm thử, triển khai dự án và thực hiện video giới thiệu,Biên  |                           soạn tài liệu Overleaf, Poster, Powerpoint, thuyết trình, đề xuất cải tiến.|
+| Trần Anh Tú              | Phát triển toàn bộ mã nguồn, thiết kế cơ sở dữ liệu, kiểm thử, triển khai dự án và thực hiện video giới thiệu,Biên                              soạn tài liệu Overleaf, Poster, Powerpoint, thuyết trình, đề xuất cải tiến.|
 | Trần Thế Lộc             | Hỗ trợ bài tập lớn.|
 | Phạm Đình Minh Trưởng    | Hỗ trợ bài tập lớn.  |
 

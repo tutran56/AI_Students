@@ -76,11 +76,9 @@ drive.mount('/content/drive')</code></pre>
 <br>
     <h2>Bước 7: Tải mã nguồn YOLOv7</h2>
     <p>Tải mã nguồn YOLOv7 từ GitHub và chuyển đến thư mục tương ứng:</p>
-    <pre><code>
     
     !git clone https://github.com/WongKinYiu/yolov7.git
     %cd yolov7
-     </pre></code>
 <br>
     <h2>Bước 8: Tải trọng số YOLOv7</h2>
     <p>Tải trọng số YOLOv7 từ GitHub và lưu vào thư mục thích hợp:</p>
@@ -89,8 +87,8 @@ drive.mount('/content/drive')</code></pre>
 <br>
     <h2>Bước 9: Huấn luyện mô hình</h2>
     <p>Sử dụng lệnh sau để huấn luyện mô hình YOLOv7:</p>
-
-       <pre><code>!python /content/yolov7/train.py \
+  <code><pre>
+   !python /content/yolov7/train.py \
     --data "/content/drive/MyDrive/BTL_AII/AI.v3-ai.yolov7pytorch/data.yaml" \
     --cfg "/content/yolov7/cfg/training/yolov7.yaml" \
     --weights "/content/SCB-dataset/yolov7/yolov7.pt" \
@@ -101,7 +99,7 @@ drive.mount('/content/drive')</code></pre>
     --workers 4 \
     --cache-images \
     --name Yolo7_BTL \
-    --project "/content/drive/MyDrive/BTL_AII"</code></pre>
+    --project "/content/drive/MyDrive/BTL_AII"
 
      </code></pre>
     <br>

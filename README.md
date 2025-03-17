@@ -38,7 +38,7 @@
 <div align="center">
 
 <p align="center">
-  <img src="./anhimage/cnyolov7" alt="System Architecture" width="800"/>
+  <img src="./anhimage/cnyolov7.avif" alt="System Architecture" width="800"/>
 </p>
 </div>
 

@@ -1,10 +1,9 @@
-<h1 align="center">ỨNG DỤNG MÃ QR TRONG 
-HỆ THỐNG ĐIỂM DANH SINH VIÊN </h1>
+<h1 align="center">NHẬN DIỆN HÀNH VI CỦA SINH VIÊN TRONG LỚP HỌC </h1>
 
 <div align="center">
 
 <p align="center">
-  <img src="images/logoDaiNam.png" alt="DaiNam University Logo" width="200"/>
+  <img src="" alt="DaiNam University Logo" width="200"/>
 </p>
 
 [![DaiNam University](https://img.shields.io/badge/DaiNam%20University-red?style=for-the-badge)](https://dainam.edu.vn)

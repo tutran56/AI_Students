@@ -31,39 +31,15 @@
 </p>
 
 ---
-## 📂 Cấu trúc dự án
-
-📦 Project  
-├── 📂 AttendanceDB  # Thư mục chứa cơ sở dữ liệu MongoDB backup  
-├── 📂 ThongBao  
-│   ├── ThongBao.ino  # Mã nguồn Arduino điều khiển LED (xanh/đỏ) và còi  
-├── 📂 templates  
-│   ├── checkin_success.html  # Giao diện HTML thông báo điểm danh thành công  
-├── chuongTrinh.py  # Chương trình chính khởi động LED service, Tkinter UI  
-├── Diemdanh.py  # Giao diện quản lý lịch sử điểm danh, xuất CSV, kết nối MongoDB  
-├── TaoQR.py  # Tạo mã QR, gửi email, quản lý sinh viên, Flask server xử lý điểm danh  
-
----
-
 
 
 ## 🛠️ CÔNG NGHỆ SỬ DỤNG
 
 <div align="center">
 
-### 📡 Phần cứng
-[![Arduino](https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white)](https://www.arduino.cc/)
-[![LED](https://img.shields.io/badge/LED-green?style=for-the-badge)]()
-[![Buzzer](https://img.shields.io/badge/Buzzer-red?style=for-the-badge)]()
-[![WiFi](https://img.shields.io/badge/WiFi-2.4GHz-orange?style=for-the-badge)]()
-
-### 🖥️ Phần mềm
-[![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)]()
-[![MongoDB](https://img.shields.io/badge/MongoDB-4.x-green?style=for-the-badge&logo=mongodb)]()
-[![Flask](https://img.shields.io/badge/Flask-Framework-black?style=for-the-badge&logo=flask)]()
-[![Tkinter](https://img.shields.io/badge/Tkinter-GUI-yellow?style=for-the-badge)]()
-[![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-blue?style=for-the-badge)]()
-
+<p align="center">
+  <img src="./anhimage/cnyolov7" alt="System Architecture" width="800"/>
+</p>
 </div>
 
 ## 🛠️ Yêu cầu hệ thống

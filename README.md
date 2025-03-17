@@ -76,9 +76,10 @@ drive.mount('/content/drive')</code></pre>
 
     <h2>Bước 7: Tải mã nguồn YOLOv7</h2>
     <p>Tải mã nguồn YOLOv7 từ GitHub và chuyển đến thư mục tương ứng:</p>
+    <pre></pre>
     
-    <pre><code>!git clone https://github.com/WongKinYiu/yolov7.git
-    %cd yolov7</code></pre>
+    !git clone https://github.com/WongKinYiu/yolov7.git
+    %cd yolov7
 
     <h2>Bước 8: Tải trọng số YOLOv7</h2>
     <p>Tải trọng số YOLOv7 từ GitHub và lưu vào thư mục thích hợp:</p>

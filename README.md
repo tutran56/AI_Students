@@ -3,7 +3,7 @@
 <div align="center">
 
 <p align="center">
-  <img src="./logodnu.webp" alt="DaiNam University Logo" width="200"/>
+  <img src="./anhimage/logodnu.webp" alt="DaiNam University Logo" width="200"/>
 </p>
 
 [![DaiNam University](https://img.shields.io/badge/DaiNam%20University-red?style=for-the-badge)](https://dainam.edu.vn)

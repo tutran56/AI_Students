@@ -85,9 +85,9 @@ drive.mount('/content/drive')</code></pre>
     
     !wget https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7.pt -P /content/SCB-dataset/yolov7/
 <br>
-    ## Bước 9: Huấn luyện mô hình
+    <h2>Bước 9: Huấn luyện mô hình</h2>
 
-Sử dụng lệnh sau để huấn luyện mô hình YOLOv7:
+<p>Sử dụng lệnh sau để huấn luyện mô hình YOLOv7:<p>
 
 ```bash
 !python /content/yolov7/train.py \
@@ -102,7 +102,7 @@ Sử dụng lệnh sau để huấn luyện mô hình YOLOv7:
     --cache-images \
     --name Yolo7_BTL \
     --project "/content/drive/MyDrive/BTL_AII"
-
+```
 
     <h2>Bước 10: Nhận diện hành vi qua video</h2>
     

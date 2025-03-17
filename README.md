@@ -54,7 +54,7 @@ or
 
 
  <h2>Bước 1: Thu thập dữ liệu</h2>
-    <p>Thu thập dữ liệu video hoặc hình ảnh hành vi học sinh từ các nguồn khác nhau.</p>
+    <p>Thu thập dữ liệu video hoặc hình ảnh hành vi học sinh từ nguồn được quay bằng điện thoại.</p>
     <h2>Bước 2: Gán nhãn dữ liệu</h2>
     <p>Đánh dấu các đối tượng và hành vi (ví dụ: giơ tay, sử dụng điện thoại, v.v.) trong dữ liệu. Sử dụng dataset của bạn và của người khác nếu cần.</p>
     <h2>Bước 3: Upload file lên Google Drive</h2>

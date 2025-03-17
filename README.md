@@ -101,14 +101,10 @@ drive.mount('/content/drive')</code></pre>
     --name Yolo7_BTL \
     --project "/content/drive/MyDrive/BTL_AII"
 
-    
-
     <h2>Bước 10: Nhận diện hành vi qua video</h2>
+    
     <p>Chạy mô hình YOLOv7 để nhận diện hành vi trong video:</p>
 
-
-
-  
   import subprocess
   cmd = ["python3", "/content/yolov7/detect.py", 
         "--weights", "/content/drive/MyDrive/BTL_AII/Yolo7_BTL/weights/best.pt", 

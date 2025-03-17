@@ -104,8 +104,8 @@ drive.mount('/content/drive')</code></pre>
     --project "/content/drive/MyDrive/BTL_AII"
 ```
 
-    <h2>Bước 10: Nhận diện hành vi qua video</h2>
-    <p>Chạy mô hình YOLOv7 để nhận diện hành vi trong video:</p>
+  ##  Bước 10: Nhận diện hành vi qua video</h2>
+    Chạy mô hình YOLOv7 để nhận diện hành vi trong video:
 
     <br>
 ```bash

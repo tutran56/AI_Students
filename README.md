@@ -79,8 +79,9 @@ drive.mount('/content/drive')</code></pre>
     <pre><code>
     
     !git clone https://github.com/WongKinYiu/yolov7.git
-    %cd yolov7</code></pre>
-
+    %cd yolov7
+    </code></pre>
+<br>
     <h2>Bước 8: Tải trọng số YOLOv7</h2>
     <p>Tải trọng số YOLOv7 từ GitHub và lưu vào thư mục thích hợp:</p>
     

@@ -48,65 +48,74 @@
 <br>
 or
 <br>
--Sử dụng <a href="https://colab.google/" target="_blank">Colab</a>
-
-### 🔩 Kết nối phần cứng:
-<img src="images/Ketnoiphancung.png" alt="System Architecture" width="800"/>
-
-### ⛓️‍💥 Hướng dẫn cắm dây
-| Thiết bị        | Chân trên thiết bị | Kết nối Arduino UNO | Ghi chú                         |
-|-----------------|-------------------|---------------------|---------------------------------|
-| Breadboard      | -                 | -                   | Dùng để kết nối linh kiện       |
-| Đèn LED xanh    | Anode (+), Cathode (-) | Anode → Digital Pin 9, Cathode → GND | Led thông báo khi sinh viên điểm danh đúng giờ|
-| Đèn LED đỏ      | Anode (+), Cathode (-) | Anode → Digital Pin 10, Cathode → GND | Led thông báo khi sinh viên điểm danh muộn|
-| Buzzer         | (+), (-)            | (+) → Digital Pin 11, (-) → GND |Còi thông báo khi sinh viên điểm danh muộn|
-| 7 dây điện      | -                 | -                   | Dùng để nối các linh kiện       |
+-Sử dụng <a href="https://colab.google/" target="_blank">Colab</a> cho nhanh
 
 ## 🚀 Hướng dẫn cài đặt và chạy
-1️⃣ Chuẩn bị phần cứng
-- **Nạp mã Arduino**:
 
-    1. Mở file `ThongBao.ino` bằng Arduino IDE.
-    2. Kết nối board Arduino với máy tính.
-    3. Nạp (upload) mã nguồn lên board.
-    4. Đảm bảo Arduino xuất hiện trên cổng COM5 (hoặc thay đổi trong `chuongTrinh.py` nếu cổng khác COM5).
 
-2️⃣ Cài đặt thư viện Python. 
+ <h2>Bước 1: Thu thập dữ liệu</h2>
+    <p>Thu thập dữ liệu video hoặc hình ảnh hành vi học sinh từ các nguồn khác nhau.</p>
 
-Cài đặt Python 3 nếu chưa có, sau đó cài đặt các thư viện cần thiết bằng pip.
+    <h2>Bước 2: Gán nhãn dữ liệu</h2>
+    <p>Đánh dấu các đối tượng và hành vi (ví dụ: giơ tay, sử dụng điện thoại, v.v.) trong dữ liệu. Sử dụng dataset của bạn và của người khác nếu cần.</p>
 
-3️⃣ Cấu hình MongoDB
-- Cài đặt MongoDB nếu chưa có.
-- Khởi động MongoDB và đảm bảo đang hoạt động tại `mongodb://localhost:27017/`.
-- Khôi phục cơ sở dữ liệu từ bản sao lưu:
+    <h2>Bước 3: Upload file lên Google Drive</h2>
+    <p>Để tải dữ liệu lên Google Drive, bạn có thể sử dụng giao diện web hoặc API.</p>
 
-        mongorestore --db AttendanceDB "đường-dẫn-đến-thư-mục-AttendanceDB"
-- Ví dụ:
+    <h2>Bước 4: Vào Colab để Train</h2>
+    <p>Truy cập vào Google Colab để thực hiện huấn luyện mô hình YOLOv7.</p>
 
-        mongorestore --db AttendanceDB "C:\Users\LENOVO\Documents\Demo2QR\AttendanceDB"
-📌 Lưu ý:
--	Tránh trùng lặp cơ sở dữ liệu: Trước khi thực hiện restore, hãy kiểm tra xem MongoDB đã có cơ sở dữ liệu tên AttendanceDB chưa. Nếu có, bạn có thể gặp lỗi hoặc dữ liệu cũ có thể bị ghi đè.
--	Đảm bảo MongoDB đang chạy: Nếu MongoDB chưa được khởi động, lệnh mongorestore sẽ không hoạt động.
+    <h2>Bước 5: Liên kết Colab với Google Drive</h2>
+    <p>Trong Google Colab, sử dụng lệnh sau để gắn kết Google Drive:</p>
+    <pre><code>from google.colab import drive
+drive.mount('/content/drive')</code></pre>
 
-4️⃣ Chạy các chương trình
+    <h2>Bước 6: Tải các thư viện cần thiết</h2>
+    <p>Sử dụng các lệnh sau để cài đặt các thư viện cần thiết:</p>
+    <pre><code>!pip install torch torchvision
+!pip install matplotlib
+!pip install opencv-python
+!pip install wandb</code></pre>
 
-Để đảm bảo hệ thống hoạt động đúng cách, bạn cần khởi chạy `chuongTrinh.py` trước, thay vì chạy từng file con riêng lẻ. File này cung cấp giao diện chính và bao gồm logic kết nối với Arduino board. Nếu chạy trực tiếp các file con, việc kết nối với Arduino sẽ không hoạt động.
+    <h2>Bước 7: Tải mã nguồn YOLOv7</h2>
+    <p>Tải mã nguồn YOLOv7 từ GitHub và chuyển đến thư mục tương ứng:</p>
+    <pre><code>!git clone https://github.com/WongKinYiu/yolov7.git
+%cd yolov7</code></pre>
 
-✅ Chạy ứng dụng chính (`chuongTrinh.py`):
+    <h2>Bước 8: Tải trọng số YOLOv7</h2>
+    <p>Tải trọng số YOLOv7 từ GitHub và lưu vào thư mục thích hợp:</p>
+    <pre><code>!wget https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7.pt -P /content/SCB-dataset/yolov7/</code></pre>
 
-    python chuongTrinh.py
-- Ứng dụng sẽ:
+    <h2>Bước 9: Huấn luyện mô hình</h2>
+    <p>Sử dụng lệnh sau để huấn luyện mô hình YOLOv7:</p>
+    <pre><code>!python /content/yolov7/train.py \
+    --data "/content/drive/MyDrive/BTL_AII/AI.v3-ai.yolov7pytorch/data.yaml" \
+    --cfg "/content/yolov7/cfg/training/yolov7.yaml" \
+    --weights "/content/SCB-dataset/yolov7/yolov7.pt" \
+    --epochs 50 \
+    --batch-size 16 \
+    --img-size 640 \
+    --device 0 \
+    --workers 4 \
+    --cache-images \
+    --name Yolo7_BTL \
+    --project "/content/drive/MyDrive/BTL_AII"</code></pre>
 
-    - Khởi động **LED Service** tại `localhost:6000` để điều khiển LED và còi.
-    - Hiển thị giao diện chính (Tkinter) với các nút: **Tạo mã QR** và **Xem điểm danh**
-
-✅ Chạy ứng dụng quản lý điểm danh (`Diemdanh.py`):
-
-    python Diemdanh.py
-
-✅ Chạy ứng dụng tạo mã QR (`TaoQR.py`):
-
-    python TaoQR.py
+    <h2>Bước 10: Nhận diện hành vi qua video</h2>
+    <p>Chạy mô hình YOLOv7 để nhận diện hành vi trong video:</p>
+    <pre><code>import subprocess
+cmd = ["python3", "/content/yolov7/detect.py", 
+       "--weights", "/content/drive/MyDrive/BTL_AII/Yolo7_BTL/weights/best.pt", 
+       "--source", "/content/drive/MyDrive/Capcut/1.MOV", 
+       "--img-size", "640", 
+       "--conf-thres", "0.1", 
+       "--save-txt", "--save-conf", 
+       "--project", "chạy/phát hiện", 
+       "--name", "detect_output", 
+       "--exist-ok"]
+result = subprocess.run(cmd, capture_output=True, text=True)
+print(result.stdout)
+print(result.stderr)</code></pre>
 
 ## 📖 Hướng dẫn sử dụng
 1️⃣ Điểm danh qua QR code

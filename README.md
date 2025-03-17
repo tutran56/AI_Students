@@ -127,7 +127,7 @@ print(result.stderr)
 
 
 ## 🤝 Đóng góp
-Dự án được phát triển bởi 4 thành viên:
+Dự án được phát triển bởi 3 thành viên:
 
 | Họ và Tên                | Vai trò                  |
 |--------------------------|--------------------------|

@@ -42,23 +42,13 @@
 </p>
 </div>
 
-## 🛠️ Yêu cầu hệ thống
+##  Yêu cầu hệ thống
 
-### 🔌 Phần cứng
-- **Arduino Uno** (hoặc board tương thích) với **LED (2 màu) và còi**.
-- **Cáp USB** để kết nối Arduino với máy tính.
-- ⚠️ **Lưu ý:** Mặc định mã nguồn Arduino trong `ThongBao.ino` sử dụng cổng `COM5`. Nếu Arduino của bạn sử dụng cổng khác, hãy thay đổi biến `SERIAL_PORT` trong `chuongTrinh.py`.
-
-### 💻 Phần mềm
-- **🐍 Python 3+**
-- **🍃 MongoDB** (kết nối mặc định: `mongodb://localhost:27017/`)
-- **⚡ Arduino IDE** để nạp file `ThongBao.ino` lên board Arduino.
-
-### 📦 Các thư viện Python cần thiết
-Cài đặt các thư viện bằng lệnh:
-
-    pip install pillow qrcode pymongo tkcalendar flask pyserial gtts pygame
-## 🧮 Bảng mạch
+-Có thể sử dụng Visual nếu máy đủ khoẻ 
+<br>
+or
+<br>
+-Sử dụng <a href="https://colab.google/" target="_blank">Colab</a>
 
 ### 🔩 Kết nối phần cứng:
 <img src="images/Ketnoiphancung.png" alt="System Architecture" width="800"/>

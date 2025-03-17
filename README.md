@@ -78,7 +78,7 @@ drive.mount('/content/drive')</code></pre>
     <p>Tải mã nguồn YOLOv7 từ GitHub và chuyển đến thư mục tương ứng:</p>
     
     <pre><code>!git clone https://github.com/WongKinYiu/yolov7.git
-%cd yolov7</code></pre>
+    %cd yolov7</code></pre>
 
     <h2>Bước 8: Tải trọng số YOLOv7</h2>
     <p>Tải trọng số YOLOv7 từ GitHub và lưu vào thư mục thích hợp:</p>
@@ -88,7 +88,7 @@ drive.mount('/content/drive')</code></pre>
     <h2>Bước 9: Huấn luyện mô hình</h2>
     
     <p>Sử dụng lệnh sau để huấn luyện mô hình YOLOv7:</p>
-    <pre><code>!python /content/yolov7/train.py \
+     !python /content/yolov7/train.py \
     --data "/content/drive/MyDrive/BTL_AII/AI.v3-ai.yolov7pytorch/data.yaml" \
     --cfg "/content/yolov7/cfg/training/yolov7.yaml" \
     --weights "/content/SCB-dataset/yolov7/yolov7.pt" \
@@ -100,11 +100,11 @@ drive.mount('/content/drive')</code></pre>
     --cache-images \
     --name Yolo7_BTL \
     --project "/content/drive/MyDrive/BTL_AII"</code></pre>
-
+    
     <h2>Bước 10: Nhận diện hành vi qua video</h2>
     <p>Chạy mô hình YOLOv7 để nhận diện hành vi trong video:</p>
     
-    <pre><code>import subprocess
+import subprocess
 cmd = ["python3", "/content/yolov7/detect.py", 
        "--weights", "/content/drive/MyDrive/BTL_AII/Yolo7_BTL/weights/best.pt", 
        "--source", "/content/drive/MyDrive/Capcut/1.MOV", 
@@ -118,43 +118,6 @@ result = subprocess.run(cmd, capture_output=True, text=True)
 print(result.stdout)
 print(result.stderr)</code></pre>
 
-## 📖 Hướng dẫn sử dụng
-1️⃣ Điểm danh qua QR code
-
-- Sinh viên nhận email chứa mã QR.
-- Khi quét mã, trình duyệt sẽ gửi yêu cầu điểm danh đến Flask server.
-- Hệ thống kiểm tra tính hợp lệ và cập nhật vào MongoDB, đồng thời điều khiển Arduino:
-    - ✅ Điểm danh đúng hạn → LED xanh.
-    - ⏳ Điểm danh trễ → LED đỏ, còi, phát thông báo.
-    
-2️⃣ Quản lý sinh viên & mã QR
-- Qua giao diện của TaoQR.py, bạn có thể:
-    - Thêm, sửa, xóa thông tin sinh viên.
-    - Nhập/xuất danh sách sinh viên từ/đến file CSV.
-    - Tạo QR cho sinh viên theo lớp hoặc toàn bộ sinh viên.
-    - Xóa mã QR cũ một cách thủ công.
-
-3️⃣ Xem lịch sử điểm danh
-- Qua giao diện của Diemdanh.py, bạn có thể:
-    - Lọc danh sách điểm danh theo ngày, lớp, trạng thái.
-    - Xuất dữ liệu điểm danh ra file CSV.
-    - Hệ thống tự động cập nhật và chốt các phiên điểm danh.
-
-## ⚙️ Cấu hình & Ghi chú
-
-1. Cổng Arduino: 
-- Mặc định sử dụng COM5, có thể cập nhật trong `chuongTrinh.py`.
-2. Email gửi mã QR:
-- Trong `TaoQR.py`, cập nhật thông tin *sender_email* và *sender_password*.(sender email là địa chỉ email gửi, sender password là mật khẩu ứng dụng của email đó.)
-3. Thời gian hiệu lực mã QR: 
-- Mã QR có hiệu lực 100 phút kể từ thời điểm tạo.
-4. Môi trường mạng: 
-- Thiết bị quét QR cần kết nối cùng mạng với máy chủ.
-
-## 📰 Poster
-<p align="center">
-  <img src="images/PosterNhom1.png" alt="System Architecture" width="800"/>
-</p>
 
 ## 🤝 Đóng góp
 Dự án được phát triển bởi 4 thành viên:

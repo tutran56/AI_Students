@@ -80,6 +80,7 @@ drive.mount('/content/drive')</code></pre>
     
     !git clone https://github.com/WongKinYiu/yolov7.git
     %cd yolov7
+     </pre></code>
 <br>
     <h2>Bước 8: Tải trọng số YOLOv7</h2>
     <p>Tải trọng số YOLOv7 từ GitHub và lưu vào thư mục thích hợp:</p>
@@ -100,7 +101,7 @@ drive.mount('/content/drive')</code></pre>
     --workers 4 \
     --cache-images \
     --name Yolo7_BTL \
-    --project "/content/drive/MyDrive/BTL_AII"
+    --project "/content/drive/MyDrive/BTL_AII"</code></pre>
     <br>
     <h2>Bước 10: Nhận diện hành vi qua video</h2>
     <p>Chạy mô hình YOLOv7 để nhận diện hành vi trong video:</p>

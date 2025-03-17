@@ -105,9 +105,8 @@ drive.mount('/content/drive')</code></pre>
 ```
 
     <h2>Bước 10: Nhận diện hành vi qua video</h2>
-    
     <p>Chạy mô hình YOLOv7 để nhận diện hành vi trong video:</p>
-
+```bash
   import subprocess
   cmd = ["python3", "/content/yolov7/detect.py", 
         "--weights", "/content/drive/MyDrive/BTL_AII/Yolo7_BTL/weights/best.pt", 
@@ -121,7 +120,7 @@ drive.mount('/content/drive')</code></pre>
 result = subprocess.run(cmd, capture_output=True, text=True)
 print(result.stdout)
 print(result.stderr)
-
+```
 
 
 

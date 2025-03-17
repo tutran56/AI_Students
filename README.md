@@ -84,12 +84,11 @@ drive.mount('/content/drive')</code></pre>
     <h2>Bước 8: Tải trọng số YOLOv7</h2>
     <p>Tải trọng số YOLOv7 từ GitHub và lưu vào thư mục thích hợp:</p>
     
-    <pre><code>
     !wget https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7.pt -P /content/SCB-dataset/yolov7/</code></pre>
 <br>
     <h2>Bước 9: Huấn luyện mô hình</h2>
     <p>Sử dụng lệnh sau để huấn luyện mô hình YOLOv7:</p>
-     <pre><code>
+    
      !python /content/yolov7/train.py \
     --data "/content/drive/MyDrive/BTL_AII/AI.v3-ai.yolov7pytorch/data.yaml" \
     --cfg "/content/yolov7/cfg/training/yolov7.yaml" \
@@ -101,11 +100,11 @@ drive.mount('/content/drive')</code></pre>
     --workers 4 \
     --cache-images \
     --name Yolo7_BTL \
-    --project "/content/drive/MyDrive/BTL_AII"</code></pre>
+    --project "/content/drive/MyDrive/BTL_AII"
     <br>
     <h2>Bước 10: Nhận diện hành vi qua video</h2>
     <p>Chạy mô hình YOLOv7 để nhận diện hành vi trong video:</p>
-  <pre><code>
+  
 import subprocess
 cmd = ["python3", "/content/yolov7/detect.py", 
        "--weights", "/content/drive/MyDrive/BTL_AII/Yolo7_BTL/weights/best.pt", 
@@ -118,7 +117,7 @@ cmd = ["python3", "/content/yolov7/detect.py",
        "--exist-ok"]
 result = subprocess.run(cmd, capture_output=True, text=True)
 print(result.stdout)
-print(result.stderr)</code></pre>
+print(result.stderr)
 
 
 ## 🤝 Đóng góp
@@ -126,7 +125,7 @@ Dự án được phát triển bởi 4 thành viên:
 
 | Họ và Tên       | Vai trò                  |
 |-----------------|--------------------------|
-| Nguyễn Nam Hưng | Phát triển toàn bộ mã nguồn, thiết kế cơ sở dữ liệu, kiểm thử, triển khai dự án và thực hiện video giới thiệu.|
+| Trần Anh Tú     | Phát triển toàn bộ mã nguồn, thiết kế cơ sở dữ liệu, kiểm thử, triển khai dự án và thực hiện video giới thiệu.|
 | Hoàng Mạnh Linh | Biên soạn tài liệu Overleaf, Poster, Powerpoint, thuyết trình, đề xuất cải tiến, và hỗ trợ bài tập lớn.|
 | Đào Đức Mạnh    | Thiết kế slide PowerPoint, hỗ trợ bài tập lớn.  |
 | Cao Văn Huy     | Hỗ trợ bài tập lớn       |

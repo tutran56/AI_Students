@@ -55,24 +55,21 @@ or
 
  <h2>Bước 1: Thu thập dữ liệu</h2>
     <p>Thu thập dữ liệu video hoặc hình ảnh hành vi học sinh từ các nguồn khác nhau.</p>
-
     <h2>Bước 2: Gán nhãn dữ liệu</h2>
     <p>Đánh dấu các đối tượng và hành vi (ví dụ: giơ tay, sử dụng điện thoại, v.v.) trong dữ liệu. Sử dụng dataset của bạn và của người khác nếu cần.</p>
-
     <h2>Bước 3: Upload file lên Google Drive</h2>
     <p>Để tải dữ liệu lên Google Drive, bạn có thể sử dụng giao diện web hoặc API.</p>
-
     <h2>Bước 4: Vào Colab để Train</h2>
     <p>Truy cập vào Google Colab để thực hiện huấn luyện mô hình YOLOv7.</p>
-
     <h2>Bước 5: Liên kết Colab với Google Drive</h2>
     <p>Trong Google Colab, sử dụng lệnh sau để gắn kết Google Drive:</p>
     <pre><code>from google.colab import drive
 drive.mount('/content/drive')</code></pre>
-
     <h2>Bước 6: Tải các thư viện cần thiết</h2>
     <p>Sử dụng các lệnh sau để cài đặt các thư viện cần thiết:</p>
-    <pre><code>!pip install torch torchvision
+    <pre><code>
+      
+!pip install torch torchvision
 !pip install matplotlib
 !pip install opencv-python
 !pip install wandb</code></pre>

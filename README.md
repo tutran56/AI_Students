@@ -87,6 +87,7 @@ drive.mount('/content/drive')</code></pre>
 <br>
     <h2>Bước 9: Huấn luyện mô hình</h2>
     <p>Sử dụng lệnh sau để huấn luyện mô hình YOLOv7:</p>
+    
    !python /content/yolov7/train.py \
     --data "/content/drive/MyDrive/BTL_AII/AI.v3-ai.yolov7pytorch/data.yaml" \
     --cfg "/content/yolov7/cfg/training/yolov7.yaml" \
@@ -99,13 +100,15 @@ drive.mount('/content/drive')</code></pre>
     --cache-images \
     --name Yolo7_BTL \
     --project "/content/drive/MyDrive/BTL_AII"
+    
+    <br>
     <br>
     <h2>Bước 10: Nhận diện hành vi qua video</h2>
     <p>Chạy mô hình YOLOv7 để nhận diện hành vi trong video:</p>
   
-import subprocess
-cmd = ["python3", "/content/yolov7/detect.py", 
-       "--weights", "/content/drive/MyDrive/BTL_AII/Yolo7_BTL/weights/best.pt", 
+  import subprocess
+  cmd = ["python3", "/content/yolov7/detect.py", 
+        "--weights", "/content/drive/MyDrive/BTL_AII/Yolo7_BTL/weights/best.pt", 
        "--source", "/content/drive/MyDrive/Capcut/1.MOV", 
        "--img-size", "640", 
        "--conf-thres", "0.1", 

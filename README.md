@@ -59,6 +59,7 @@ or
     <p>Thu thập dữ liệu video hoặc hình ảnh hành vi học sinh từ nguồn được quay bằng điện thoại.</p>
     <h2>Bước 2: Gán nhãn dữ liệu</h2>
     <p>Đánh dấu các đối tượng và hành vi (ví dụ: giơ tay, sử dụng điện thoại, v.v.) trong dữ liệu. Sử dụng dataset của bạn và của người khác nếu cần.</p>
+   <p>Dataset </p> <a href="https://app.roboflow.com/ttnt-nyz2m/ai-fxy4m/3" target="_blank">Tại Đây</a> 
     <h2>Bước 3: Upload file lên Google Drive</h2>
     <p>Để tải dữ liệu lên Google Drive, bạn có thể sử dụng giao diện web hoặc API.</p>
     <h2>Bước 4: Vào Colab để Train</h2>
